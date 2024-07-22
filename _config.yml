@@ -197,10 +197,10 @@ defaults:
 
 sass:
   style: compressed
-  load_paths:
-   - _sass
-   custom:
-   - assets/css/style.scss
+  # load_paths:
+  #  - _sass
+  #  custom:
+  #  - assets/css/style.scss
 
 compress_html:
   clippings: all
