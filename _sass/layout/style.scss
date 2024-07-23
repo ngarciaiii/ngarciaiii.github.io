@@ -22,4 +22,20 @@ aside {
     #panel-wrapper .post-tag:hover {
         color: rgba(255 ,255 ,255 ,.95);
     }
+
+    h2.panel-heading {
+        color: #1e1e1e !important;
+    }
+}
+
+#sidebar {
+     h1.site-title {
+        color:#1e1e1e !important;
+    }
+}
+
+#topbar {
+    a {
+        color: var(--text-muted-color);
+    }
 }
