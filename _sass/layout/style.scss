@@ -1,14 +1,15 @@
 /*
-custom styles
+custom styles overhauls
 */
 
 
-aside {
+// sidebar - leftside, aside - rightside
+#sidebar, aside {
     background-image: url('/assets/img/miscs/grasshoppers.jpeg');
     background-repeat: repeat; /* Repeat the image */
     background-size: auto; /* Adjust as needed */
     margin: 0;
     padding: 0;
     height: 100vh; /* Full height */
+    color: #1e1e1e;
 }
-

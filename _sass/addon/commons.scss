@@ -703,6 +703,7 @@ $btn-mb: 0.5rem;
 
   #avatar {
     display: block;
+    align-items: center;
     width: 7rem;
     height: 7rem;
     overflow: hidden;
@@ -745,7 +746,7 @@ $btn-mb: 0.5rem;
   }
 
   .site-subtitle {
-    font-size: 95%;
+    font-size: 97%;
     color: var(--site-subtitle-color);
     margin-top: 0.25rem;
     word-spacing: 1px;
@@ -1505,6 +1506,8 @@ search {
     width: $sidebar-width-large;
 
     .profile-wrapper {
+      align-items: center;
+      text-align: center;
       margin-top: 3.5rem;
       margin-bottom: 2.5rem;
       padding-left: 3.5rem;

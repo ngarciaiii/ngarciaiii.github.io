@@ -16,7 +16,7 @@ timezone:
 
 title: ngarciaiii # the main title
 
-tagline:  # it will display as the sub-title
+tagline: sign me up for bug bounties yummy! # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
@@ -35,14 +35,16 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: your_full_name
-  email: example@dotwitter_usernamemain.com # change to your email address
+  email: nicolas.garciaiii@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username # change to your twitter homepage
     - https://github.com/username # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/nicolas-garcia-iii
+
+
 
 # Site Verification Settings
 webmaster_verifications:
@@ -86,7 +88,7 @@ pageviews:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: # [light | dark]
+theme_mode: dark # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
@@ -197,10 +199,6 @@ defaults:
 
 sass:
   style: compressed
-  # load_paths:
-  #  - _sass
-  #  custom:
-  #  - assets/css/style.scss
 
 compress_html:
   clippings: all
