@@ -9,5 +9,4 @@ order: 4
 
 With an insatiable appetite for bugs, I explore programming, software quality, and cybersecurity in everyday life.
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+> Fun Fact: I'm deaf and spent 4 years as a Software Quality Analyst working as a Federal contractor. I’ve completed an OSCP online course and am looking forward to taking the exam soon!

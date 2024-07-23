@@ -13,3 +13,13 @@ custom styles overhauls
     height: 100vh; /* Full height */
     
 }
+
+aside {
+    .btn:hover{
+        background-color: var(--sidebar-hover-bg);
+    } 
+
+    #panel-wrapper .post-tag:hover {
+        color: rgba(255 ,255 ,255 ,.95);
+    }
+}
