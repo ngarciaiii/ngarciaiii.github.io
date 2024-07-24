@@ -61,3 +61,4 @@ This work is published under [MIT][mit] License.
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
 triggering Github deplyoment
 wake up ghpage deployment
+how manytimes gotta I trigger deployment
