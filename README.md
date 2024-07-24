@@ -62,3 +62,4 @@ This work is published under [MIT][mit] License.
 triggering Github deplyoment
 wake up ghpage deployment
 how manytimes gotta I trigger deployment
+deployment triggerer
