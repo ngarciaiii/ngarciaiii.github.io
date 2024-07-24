@@ -1,0 +1,198 @@
+---
+layout: post
+title:  "OOP Java P1 Wk3 P3"
+date:   2017-06-07 9:05:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+# The ArrayList Data Structure
+
+From <strong>Exercise #61</strong> to <strong>Exercise #69</strong> focus on `ArrayList<Integer>()`. I am going to start with <strong>Exercise #64</strong> which covers on how to use `(ArrayList<Integer> list)`. Recall the <strong>Exercise #46 Average of Given Numbers</strong> which covers on parameter `(in num1, int num2, int num3, ...)`, almost the same idea, but using array `list` instead.
+
+# Average Of Numbers
+
+```java
+public class AverageOfNumbers {
+
+    public static int sum(ArrayList<Integer> list){
+        int sum = 0;
+        for (int num :list){
+                sum += num;
+        } return sum;
+    }
+```
+
+Creating a method `sum`, and using `for (int num : list)` to go through with each element in the array. In pervious exercises, we use `for(type element : array)` frequently. It is very useful. In this method, it returns the value of `sum`. This is a method that doesn't hold a value right now, but it does return a value when applied.
+
+```java
+    public static double average(ArrayList<Integer> list){
+        int i = 0;
+        for (int num : list){
+                i++;
+        }
+        double average = 1.0 * sum(list) / i;
+        return average;
+    }    
+```
+
+Another method called `average` is used to calculate an average on the array, using also a value from method `sum`.
+
+
+```java
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
+
+        System.out.println("The average is: " + average(list));
+    }
+}
+```
+
+Two methods `sum` and `average` are called in the `main` method to execute. Numbers are added to the array `list`. Now `sum` has a value, and so do the `average`.
+
+# The Variance
+
+Skipping <strong>Exercise #65 and #66</strong> because both are same as above, teaching us how to use `for (type element : array)` and using basic algorithms again. This <strong>Exercise #67</strong> might be worth to note, I faced a problem with [NetBeans][NetBeans], although I got the right result. It was meticulous and I realized what I did wrong.
+
+```java
+public class Variance {
+    public static int sum(ArrayList<Integer> list){
+        int sum = 0;
+        for (int num : list) {
+                sum += num;
+        } return sum;
+    }
+
+    public static double average(ArrayList<Integer> list){
+        int i = 0;
+        for(int num : list){
+                i++;
+        }
+        double average = (1.0 * sum(list)) / i;
+        return average;
+    }
+```
+
+Same methods borrowed from <strong>Exercise #64</strong> above. Don't worry about these... other than that they hold the values of `sum` and `average`. Let's see if you could spot a mistake in this coding below:
+
+```java
+public static double variance(ArrayList<Integer> list){
+  double result = 0;
+  double sum = 0;
+
+  for (int num : list) {
+    result = Math.pow((num - average(list)), 2);
+    sum += result;
+  }
+
+  double variance = (sum / (list.size()-1));
+  return variance;
+}
+```
+
+Could you find it? Let's take a look at the coding below that is correct and compare to identify what went wrong with the coding above.
+
+```java
+    public static double variance(ArrayList<Integer> list){
+        double result = 0;
+        double sum = 0;
+        double average = average(list);
+
+        for (int num : list) {
+                result = Math.pow((num - average), 2);
+                sum += result;
+        }
+
+        double variance = (sum / (list.size()-1));
+        return variance;
+    }
+```
+
+Yep! What happened was in the wrong coding, the `average` method is being called repeatedly for each element in the array. It reaches same result, same correct answer but cost the computer more energy and memory even.
+
+In the right coding, `average` method value is assigned to `average`, so that way `average` method wouldn't have to calculate repeatedly.
+
+```java
+// Wrong coding
+for (int num : list) {
+  result = Math.pow((num - average(list)), 2);
+  sum += result;
+}
+
+// Correct coding
+double average = average(list);
+
+for (int num : list) {
+        result = Math.pow((num - average), 2);
+        sum += result;
+}
+```
+
+# More Than Once
+
+This exercise teaches how to use `boolean` method. What's mandate in `boolean` method is to return a value of either `true`, or `false`.
+
+```java
+public static boolean moreThanOnce(ArrayList<Integer> list, int searched) {
+    int total = 0;
+    for (int number : list) {
+        if (number == searched){
+            total++;
+        }
+    }
+
+    if (total > 1) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+public static void main(String[] args) {
+   Scanner reader = new Scanner(System.in);
+   ArrayList<Integer> list = new ArrayList<Integer>();
+   list.add(3);
+   list.add(2);
+   list.add(7);
+   list.add(2);
+
+   System.out.println("Type a number: ");
+   int number = Integer.parseInt(reader.nextLine());
+   if (moreThanOnce(list, number)) {
+       System.out.println(number + " appears more than once.");
+   } else {
+       System.out.println(number + " does not appear more than once. ");
+   }
+}
+```
+
+`moreThanOnce` method will automatically tell `main` method what's `true` or `false` when it is being called.
+
+# Palindromi
+
+I believe it is spelled Palindrome, but Palindromi is in Finnish's language. This is the last exercise of week 3. I think this is easy, thanks to earlier basic algorithm <strong>Exercise #56</strong> on <strong>ReversingText</strong>. This <strong>Exercise #69</strong> asks for either `true` or `false`. Let's do a `boolean` method.
+
+```java
+public static boolean palindrome(String text) {
+
+   String reversed = "";
+   for (int i = text.length() -1; i > -1; i--) {
+       char letter = text.charAt(i);
+       reversed = reversed + letter;
+   }
+
+   if (text.equals(reversed)) {
+       return true;
+   } return false;
+}
+```
+
+## Wrapping up Week 3. Posts on SQL and Java Week 4 coming up!
+
+[NetBeans]: https://www.netbeans.org

@@ -1,0 +1,156 @@
+---
+layout: post
+title:  "OOP Java P1 Wk3 P2"
+date:   2017-06-05 9:42:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+# Continuing OOP Java Week 3
+
+In last week, we learned how to use methods and calling arguments from a method into another method. <strong>Exercise #47</strong> to <strong>Exercise #60</strong> focuses on how to manipulate a string or text using methods.
+
+I am going to be concise. <strong>Exercise #47</strong> asks to find how many characters are there in a name. <strong>Exercise #48</strong> wants to identify what the first character's element. <strong>Exercise #49</strong> wants to find the element of the last character.
+
+
+```java
+// Finding the length of a name (counting how many characters)
+int length = name.length();
+
+// Identifying the element of the first character
+char letter = name.charAt(0);
+
+// Identifying the element of the last character
+char letter = name.charAt(name.length()-1);
+}
+```  
+
+I would like to review the <strong>Exercise #49</strong>, identifying the element of the last character. Supposedly the name is "Harry", and `name.length()` found 5 characters (i.e. 0, 1, 2, 3, 4). Let's translate `name.charAt(name.length()-1)` into numeric => `name.charAt(5 - 1)` => `name.charAt(4)`. So if I want to find the last character of "Harry", then I look for `.charAt(4)` and it's the fifth character.
+
+## Reversing Name
+
+Jumping to <strong>Exercise #52</strong>, I usually use `for` loop, but [MOOC][MOOC] solutions often use `while` loop. To be honest, `while` loops often make more sense for these kind of problems than `for` loop. Let's see the difference.
+
+`for` loop solution:
+
+```java
+for (int i = name.length() - 1; i > -1; i--) {
+    char letter = name.charAt(i);
+    System.out.print(letter);
+} System.out.println("");
+```
+
+`while` loop solution:
+
+```java
+int i = name.length() - 1;
+while (i >= 0) {
+   System.out.print(name.charAt(i));
+   i--;
+} System.out.println("");
+```
+
+I prefer `for` loop this time.
+
+## First Part & The End part
+
+If I want to extract letters in the first part of the word, I could use this method `.substring()` from `String` class. It's similar to JavaScript's `.slice()`.
+
+```java
+System.out.print("Type a word: ");
+String word = reader.nextLine();
+
+System.out.print("Length of the first part: ");
+int i = Integer.parseInt(reader.nextLine());
+
+System.out.println("Result: " + word.substring(0, i));
+
+// Type a word: cartwheel
+// Length of the first part: 3
+// Result: car
+```
+See how that works? `.substring(beginning, ending)`, sometime can do just `.substring(beginning)`, taking the first part off. Let's extract letters from the end part of the word. This time, its a little trickier.
+
+```java
+System.out.print("Type a word: ");
+String word = reader.nextLine();
+
+System.out.print("Length of the end part: ");
+int i = Integer.parseInt(reader.nextLine());
+
+int j = word.length() - i;
+
+System.out.println("Result: " + word.substring(j));
+
+// Type a word: example
+// Length of the end part: 4
+// Result: mple
+```
+
+Notice how there is a `j`. It had to be done, because if I used `.substring(i)`, I wouldn't be able to get the end part that I want without doing any math. Let's do the math with `j`!
+
+- want 4 characters at end of the word i.e. `mple`
+- if `.substring(4)`, will return `ple`
+- `word.length()` = 7
+- 7 - 4 = 3
+- `word.length() - i` => `word.length() - 4` => `3 = j` => `word.substring(j)`
+
+Might be little hard to get mind around to it at first.
+
+# All About Words
+
+Skimming through from <strong>Exercise #55</strong> to <strong>Exercise #60</strong>, same basic algorithms, different syntax in Java. I am going to cover all String's methods.
+
+## .indexOf()
+
+```java
+// word1 = glitter
+//word2 = litter
+
+int index = word1.indexOf(word2);
+if (index == -1) {
+   System.out.println("The word '" + word2 + "' is not found in the word '" + word1 + "'.");
+} else {
+   System.out.println("The word '" + word2 + "' is found in the word '" + word1 + "'.");
+}
+```
+
+`.indexOf()` finds the index of an element in an element. If `indexOf()` cannot find the element in an element, then it will return `-1`. In this case, `word2` is found in `word1`!
+
+## .contains()
+
+```java
+//Using while(true) loop
+
+if (words.contains(word)){
+    System.out.println("You gave the word " + word + " twice");
+    break;
+} else {
+    words.add(word);
+}
+```
+
+Coding above covers `.contains()`, and what it does is like `indexOf()`. There was a debate on whether's faster.`.contains()` seems to be faster but it's just more convenient. `.indexOf()` is faster and is also implemented in `.contains()`.  
+
+## Other string methods
+
+```java
+// often used as a boolean purpose, seeing whether word or input is empty
+word.isEmpty();
+
+// reverses the array
+Collections.reverse(words)
+
+// sorts the array in alphabetic order
+Collections.sort(words)
+```
+
+Will need to do `import java.util.Collections;` to use `.reverse()` and `.sort()`
+
+## Ending Java WK3 part 2.
+
+## Next post's Java WK3 part 3 will be covering ArrayList Data Structure
+
+[MOOC]: https://www.mooc.fi/

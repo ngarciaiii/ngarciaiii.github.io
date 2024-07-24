@@ -1,0 +1,218 @@
+---
+layout: post
+title:  "OOP Java P1 Wk2"
+date:   2017-05-17 10:07:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+# OOP Java Part 1 Week 2
+
+The Week 2 covers loops and basics of methods. Earlier in my other previous posts, I mentioned that we could use either [Netbeans][Netbeans], or [Eclipse][Eclipse]. I realized that in [MOOC][MOOC], it's <strong>required</strong> to use <strong>NetBeans</strong> in order to <strong>unlock new exercises</strong> such as week 2 and other weeks exercises.
+
+I copied and pasted all exercises from Eclipse to NetBeans. Some of my codes are not accepted, most of them are rejected because of simple `String`, and or `whitespaces` differences. I have to follow specifics, like typing the exact same `String` as they want me to, for example: same number of whitespaces in the `String`. I do enjoy using Eclipse, because sometime I have to do more programming where components of methods aren't included and I make them myself. Netbeans have components and methods for us to use quickly . That kind of takes the fun away. Just because Netbeans have components ready, doesn't mean it's easier. <strong>It is a lot harder</strong>, because it wants us to program in a certain way. <strong>So have a ton of patience!</strong>
+
+# Week 2 begins!
+
+This week covers basic mathematic programming. I am going to summarize and cover highlights where I wouldn't have to repeat similar exercises. Some exercises will be similar and yet different.
+
+## EXERCISE #33
+
+This exercise teaches how to do sum of all numbers between two inputted numbers. It is a simple programming.
+
+```java
+public class TheSumBetweenTwoNumbers {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("First: ");
+        int num1 = Integer.parseInt(reader.nextLine());
+
+        System.out.print("Last: ");
+        int num2 = Integer.parseInt(reader.nextLine());
+
+        int sum = 0;
+
+        while (num1 <= num2) {
+            sum += num1;
+            num1++;
+
+            System.out.println(num1);
+        }
+
+        System.out.println("The sum is " + (sum));  
+    }
+}
+```
+
+`Scanner` does what it does... parsing input. `Integer.parseInt()` parses integer. First input is given a number `num1`, and then second input a second number `num2`. I want to add up all the numbers between `num1` and `num2`, so I create a variable `sum` and set it to equal to `0`.
+
+The next step is setting up a `while()` loop. Its <strong>condition is true</strong> as long `num1` is less or equals to `num2`.  Starting with `sum` and add up to the `num1`. <strong>Notice how `sum` completely ignores `num2`.</strong> Next step is `num1` increments by one every time a loop rolled. Finally, incremented `num1` is printed.
+
+The loop rolls on... until `num1` equals to `num2`. `num1` <strong>isn't the sum of anything another than an increment by 1.</strong> However `sum` is adding up in every loop. Once the loop ended, `sum` is printed and is the desired result.   
+
+## EXERCISE #34
+
+<strong>Exercise #34</strong> is the same idea as <strong>Exercise #33</strong>. It wants the result of factorial on a number. Factorial number symbol looks like this <strong>n!</strong>, and we cannot use do `n!`. The `!` is somewhat an operator and cannot be used as in variable unless it is a string. I always could use `n` as a short for `number`. Take a look at this code below:
+
+```java
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Type a number: ");
+        int n = Integer.parseInt(reader.nextLine());
+
+        int count = 1;
+        int product = 1;
+
+        while (count <= n) {
+                product *= count;
+                count++;
+        } System.out.println("Factorial is " + product);
+    }
+}
+```
+
+I am going to use `product` instead of `sum`. Isn't that what <strong>product</strong> means after of all? Using `while()` again, with a <strong>condition being true</strong> as long `count` is less or equals to `n`. Setting `count` and `product` as 1. It's what makes this little different from add and subtract. If I multiply any number to `0`, it will always remains `0`. I don't want that. `product` ignores `n`, and multiplies `count` while becoming the new `product`. Same process as in <strong>Exercise #33</strong>, `count` increments by 1 until it equals to the given number `n`.  Finally when the loop ends, `product` is printed as a result outside the loop.
+
+## EXERCISE #35
+
+Almost same formula as two other exercises above. Just more tasks and more results expected. The tasks listed:
+
+- program the power of n
+- find the result
+- sum up each results
+
+I got to use this method `Math.pow(number, power)` and it returns `double` type where will have a decimal result. One thing great about [MOOC][MOOC], is that it taught me this new trick. Showing it to you below!  
+
+```java
+System.out.print("Type a number: ");
+    int power = Integer.parseInt(reader.nextLine());
+    int sum = 0;
+    while(power >= 0) {
+        int result = (int)Math.pow(2, power);
+        System.out.println(result);
+        sum += result;
+        power--;
+    }
+
+
+    System.out.println("The result is " + sum);
+}
+```
+
+Using `(int)Math.pow(number, power)` will automatically convert the `double` result into an `int`. What's happening here is I created two variables `power` and `sum`. `power` will receive an input from a user. `sum` is set as `0`. Using same `while()` loop as previous two exercises. The <strong>condition</strong> is slightly different, it's the opposite. It's <strong>true</strong> as long the `power` is greater than `0`. While it's true, the first step inside the loop is producing a `result` and then have it printed to get a better idea of what's going on during the loops. `sum` adds up `result`. The `power` is <strong>decremented</strong> by 1 until the loop ends. `sum` is then printed as a final.
+
+## EXERCISE #36
+
+I am going to close this post with <strong>Exercise #36</strong>. Will continue with week 2 on the next post. This <strong>Exercise #36</strong> is fun and expects much more results. What this exercise wants...
+
+- to be able to put in many inputs as user want
+- end the `while()` loop with a trigger using `-1` or any negative number
+- send out a farewell string
+- print the sum of all inputs except for a negative number
+- count how many times the inputs were entered
+- find the average out of all inputs
+- find how many odd numbers were entered
+- find how many even numbers were entered
+
+Woo! I held my breath as long as I could, to list all these! Let's do the first half then second half afterward. For a user to enter inputs <strong>as many as</strong> he/she wants, we will need to use a `while()` loop. It wants us to <strong>end the loop</strong> by entering a <strong>negative number</strong>. Easily done with `break;`! Send out a `String`? Not a problem! `sum`... hmm we have done all that in the previous exercises in this post.
+
+<strong>First half: </strong>
+
+```java
+public static void main(String[] args) {
+
+    Scanner reader = new Scanner(System.in);
+
+    System.out.print("Type numbers: ");
+    int sum = 0;
+    int num;
+
+    while (true) {
+        num = Integer.parseInt(reader.nextLine());
+        if (num < 0) {
+            System.out.println("Thank you and see you later!");
+            num = 0;
+            break;
+        } else {
+            sum += num;
+        }
+     }
+    System.out.println("The sum is " + sum);
+}
+```
+
+This is the first half, and let's concise on what's happening in that code.
+
+- Two variables are entered
+  - `sum` equals to `0`, "intialized" to add up all inputs
+  - `num` is the input that user enters
+
+- `while()` loop with a condition saying <strong>always true</strong>
+  - `num` inputs parser is put in there so user can put as many as inputs he/she want
+
+- `if` conditional statment when `num` is less than `0`
+  - `String` printed
+  - negative number `num` is set to `0` so it wouldn't affect the sum
+  - `break;` is triggered, ending the always true
+
+- `else` conditional statment when when inputs are not and have not been negative
+  - inputs are being added up to `sum`
+
+- `sum` is printed when the loop ended
+
+
+I hope that's clear, and now <strong>second half</strong> coming up!
+
+```java
+public static void main(String[] args) {
+   Scanner reader = new Scanner(System.in);
+
+    System.out.print("Type numbers: ");
+    int i = 0;
+    int sum = 0;
+    int num;
+    double average = 0;
+    int oddNum = 0;
+    int evenNum = 0;
+
+    while (true) {
+        num = Integer.parseInt(reader.nextLine());
+        if (num < 0) {
+            System.out.println("Thank you and see you later!");
+            num = 0;
+            break;
+        } else {
+            i++;
+            sum += num;
+            if (num % 2 != 0) {
+                    oddNum++;
+            } else {
+                    evenNum++;
+            }
+        }
+     }
+
+    average = ((1.0*sum)/i);
+
+    System.out.println("The sum is " + sum);
+    System.out.println("How many numbers entered: " + i);
+    System.out.println("Average: " + sum + " / " + i + " = " + average);
+    System.out.println("Odd numbers: " + oddNum);
+    System.out.println("Even numbers: " + evenNum);
+}
+```
+Few variables are added. `i` to count how many times inputs are entered. Variable `double average` is added to calculate the average, using `double` to get the result in decimal. Two other variables count inputs that are either even numbers or odd numbers. All are "initialized" by setting to `0`
+
+Add the process inside `else` conditional statment, because it's where loop continues rolling. `i++` to increment by 1 to count the inputs. Add another branches of conditional statments inside the `else`, saying `if` input is not a even number, `oddNum++` increments. Else `evenNum++` increments.
+
+Outside the loop when it's done `break;`, `average` set to a mathematic equation saying `((1.0 * sum) / i)`. Now I think this is <strong>important</strong> to point out, just because <strong>`average` is assigned to a `double` type doesn't mean it will give a correct answer.</strong> It will just result with a decimal. So I added `1.0`, and then `average` will have the exact quotient.
+
+Concluding... print all the results!
+
+[MOOC]: https://www.mooc.fi/
+[NetBeans]: https://www.netbeans.org
+[Eclipse]: http://www.eclipse.org/downloads/packages/

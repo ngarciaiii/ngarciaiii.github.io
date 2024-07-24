@@ -1,0 +1,126 @@
+---
+layout: post
+title:  "OOP Java P1 Wk3"
+date:   2017-06-05 6:00:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+# UPDATE
+In [MOOC][MOOC]'s <strong>Week 1</strong> and <strong>Week 2</strong> exercises, I did not capitalize classes. I learned that <strong>classes should always be capitalized</strong>. I don't want to change all Week 1 & 2 classes, too much of work. Starting from this <strong>Week 3</strong> and on, classes are capitalized.
+
+# Starting OOP Java Week 3!
+
+I will be covering from <strong>Exercise #43</strong> to <strong>Exercise #46</strong> in this post. I am going to skip some easy exercises and focus on what might be needed to reviewed again for other uses in the future. Let's start with the easiest one!
+
+## Sum of numbers
+
+The purpose of this exercise is to get us comfortable with using method's parameter. In this <strong>Exercise #43</strong>, it asks us to create a `sum` method which will automatically add up any numbers given (by users) using parameter.
+
+```java
+public class SumOfNumbers {
+
+    public static int sum(int number1, int number2, int number3, int number4) {
+        return number1 + number2 + number3 + number4;
+    }
+
+    public static void main(String[] args) {
+        int answer = sum(4, 3, 6, 1);
+        System.out.println("Sum: " + answer);
+    }
+}
+
+// Sum: 14
+```  
+
+See how that works? The parameter `sum(int number1, int number2, int number3, int number4)` is like either variables in formula waiting to happen, or placeholders for yet inputs. We will be using parameters often in this week! This week is building up on making methods and using parameters. Let's see another example of using parameter.
+
+## Greatest
+
+<strong>Exercise #45</strong> teaches us how to identify the largest number among given numbers. I decided to do this quickly and it works as it should.
+
+```java
+public static int greatest(int number1, int number2, int number3) {
+    if (number1 > number2 && number1 > number3){
+        return number1;
+    } else if (number2 > number1 && number2 > number3) {
+        return number2;
+    } else {
+        return number3;
+    }
+}
+
+public static void main(String[] args) {
+  int result = greatest(2, 7, 3);
+  System.out.println("Greatest: " + result);
+}
+
+// Greatest: 7
+```
+
+The conditional statements in coding above goes like:
+
+- if `number1` larger than `number2` and `number3`, its `number1`
+- if `number2` larger than `number1` and `number3`, its `number2`
+- neither above, it's `number3` that's the largest
+
+There's a better way to do this and I should have known from my experience with JavaScript programming.
+
+```java
+int greatest = number1;
+if (number2 > greatest) {
+   greatest = number2;
+}
+if (number3 > greatest) {
+   greatest = number3;
+}
+return greatest;
+```
+
+What coding above does:
+
+- assigning `greatest` to `number1`
+- if `number2` is greater, then assign `greatest` to `number2`
+- likewise with `number3`
+- if neither is greater than `number1` then return `greatest`.  
+
+The latter method is much cleaner and more applicable to other challenges. We will see similarity of this later on.
+
+## Average of Given numbers
+
+<!-- I am not 100% familiar with Java's parameters and arguments, but I would like to note that parameters are arguments when they are being called into other methods. If they are not being called and used into other methods, then they are just parameters. -->
+
+We learn how methods are being called and used in other methods. <strong>Exercise #46</strong>  has two methods and one main methods. The first method is being called into the second method and the main method calls the second method.
+
+```java
+public static int sum(int number1, int number2, int number3, int number4) {
+    int sum = number1 + number2 + number3 + number4;
+    return sum;
+}
+
+public static double average(int number1, int number2, int number3, int number4) {
+    int sum = sum(number1, number2, number3, number4);
+    double average = 1.0 * sum / 4;
+    return average;
+}
+
+public static void main(String[] args) {
+    double result = average(4, 3, 6, 1);
+    System.out.println("Average: " + result);
+}
+```
+
+The `sum` <strong>method</strong> has four parameters, and they are being added up and returned as `sum`. The `average` <strong>method</strong> also has the exact same four parameters, but receives `sum` from `sum` <strong>method</strong> to calculate the average.
+
+It might be confusing to see `int sum = sum(int number1, number2, number3, number4)` in `average` <strong>method</strong> when already have `int sum = number1 + number2 + number3 + number4;` in `sum` <strong>method</strong>. Both of these are not exactly the same. `sum` <strong>method</strong> is simply an instruction of how to add up numbers together. `sum` in `average` <strong>method</strong> is on how to use `sum` <strong>method</strong> <strong>WITH</strong> given numbers later on in the `main` <strong>method</strong>.
+
+`double average = 1.0 * sum / 4` is not exactly the best way to do the average, because what if somebody want to do 5 or 7 parameters? I am sure we will learn how to do average properly later on in different exercise. Lastly, the `main` <strong>method</strong> calls `average` <strong>method</strong> to do the sum and average with given numbers.  
+
+## Ending this part of the Week 3.
+
+## Posts on Week 3 part 2, and part 3 coming up next!
+
+
+[MOOC]: https://www.mooc.fi/

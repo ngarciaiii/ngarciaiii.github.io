@@ -1,0 +1,173 @@
+---
+layout: post
+title:  "Hangman"
+date:   2017-05-26 11:37:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+I was going to continue on [Eclipse][Eclipse] with this <strong>last exercise of the Week 2</strong>, but realize it has many components and methods of its own. I decided to use [NetBeans][NetBeans], because I want to start Week 3 already. I want to be at Week 11 by now.
+
+In NetBeans, this <strong>Exercise #42</strong> has methods ready:
+
+- `hangman.gameOn()`
+    - shows if game is on
+- `hangman.printStatus()`
+    - prints the game status
+- `hangman.printWord()`
+    - prints the word user tries to guess
+- `hangman.printMan()`
+    - prints the hangman
+- `hangman.guess(String Letter)`
+    - guesses the letter
+- `printMenu()`
+    - menu set up already
+
+
+What is already there:
+
+```java
+public static void main(String[] args) {
+    Scanner reader = new Scanner(System.in);
+    Hangman hangman = new Hangman();
+
+    System.out.println("***********");
+    System.out.println("* HANGMAN  *");
+    System.out.println("***********");
+    System.out.println("");
+    printMenu();
+    System.out.println("");
+
+    // PROGRAM YOUR SOLUTION HERE
+
+    System.out.println("Thank you for playing!");
+}
+
+public static void printMenu() {
+    System.out.println(" * menu *");
+    System.out.println("quit   - quits the game");
+    System.out.println("status  - prints the game status");
+    System.out.println("a single letter uses the letter as a guess");
+    System.out.println("an empty line prints this menu");
+}
+
+```
+
+## Our tasks...
+
+- create a loop, if a command = 'quit', then break the loop
+- if command = "status", trigger method `hangman.printStatus()`
+- if command is a single letter, set it to `hangman.guess(String Letter)`
+- if command is empty, set it to `printMenu()`
+- if command is not 'quit', set it to `hangman.printMan()` and `hangman.printWord()`
+
+The first step is making a loop, my first thought is "while (hangman.gameOn()". Let's make this game. Maybe should throw in string `status` too.
+
+```java
+while (hangman.gameOn()) {
+    System.out.println("Type a command: ");
+    String quit = "quit";
+
+    String command = reader.nextLine();
+    if (command.equals(quit)) {
+        break;
+    } else if (command.equals(status)) {
+        hangman.printStatus();
+    }
+}
+```
+
+The loop is created, and it ends if 'quit' is entered, and also prints status if 'status' is entered.
+
+- ~~create a loop, if a command = 'quit', then break the loop~~
+- ~~if command = "status", trigger method `hangman.printStatus()`~~
+- if command is a single letter, set it to `hangman.guess(String Letter)`
+- if command is empty, set it to `printMenu()`
+- if command is not 'quit', set it to `hangman.printMan()` and `hangman.printWord()`
+
+Okay... in the NetBeans on <strong>Exercise #42</strong> has a hint saying `if (command.length()== 1)`, I am going to borrow that and insert it in. I think could fit the `printMenu()` in conditional statment. What else could we do better than that?
+
+```java
+String command = reader.nextLine();
+    if (command.equals(quit)) {
+        break;
+    } else if (command.equals(status)) {
+        hangman.printStatus();
+    } else if (command.length() == 1) {
+        hangman.guess(command);
+    } else if (command.length() == 0) {
+        System.out.println("");
+        printMenu();
+    }
+}
+```
+
+- ~~create a loop, if a command = 'quit', then break the loop~~
+- ~~if command = "status", trigger method `hangman.printStatus()`~~
+- ~~if command is a single letter, set it to `hangman.guess(String Letter)`~~
+- ~~if command is empty, set it to `printMenu()`~~
+- if command is not 'quit', set it to `hangman.printMan()` and `hangman.printWord()`
+
+Down to the last task... I don't think I need to explain what to do on this part.
+
+```java
+import hangman.Hangman;
+import java.util.Scanner;
+
+public class HangmanUserInteface {
+
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        Hangman hangman = new Hangman();
+
+        System.out.println("***********");
+        System.out.println("* HANGMAN  *");
+        System.out.println("***********");
+        System.out.println("");
+        printMenu();
+        System.out.println("");
+
+        // PROGRAM YOUR SOLUTION HERE
+        while (hangman.gameOn()) {
+        System.out.println("Type a command: ");
+        String quit = "quit";
+        String status = "status";
+
+        String command = reader.nextLine();
+            if (command.equals(quit)) {
+                break;
+            } else if (command.equals(status)) {
+                hangman.printStatus();
+            } else if (command.length() == 1) {
+                hangman.guess(command);
+            } else if (command.length() == 0) {
+                System.out.println("");
+                printMenu();
+            }
+            hangman.printMan();
+            hangman.printWord();
+            System.out.println("");
+        }
+
+        System.out.println("Thank you for playing!");
+    }
+
+    public static void printMenu() {
+        System.out.println(" * menu *");
+        System.out.println("quit   - quits the game");
+        System.out.println("status  - prints the game status");
+        System.out.println("a single letter uses the letter as a guess");
+        System.out.println("an empty line prints this menu");
+    }
+}
+
+```
+
+## Move on to Week 3!
+
+
+[NetBeans]: https://www.netbeans.org
+[Eclipse]: http://www.eclipse.org/downloads/packages/
+[MOOC.FI]: https://www.mooc.fi/

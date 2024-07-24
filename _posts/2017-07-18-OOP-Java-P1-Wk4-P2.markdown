@@ -1,0 +1,188 @@
+---
+layout: post
+title:  "OOP Java P1 Wk4 P2"
+date:   2017-07-19 12:05:30
+categories: java
+tags: [MOOC]
+years: ['2017']
+comments: true
+---
+
+# MOOC.fi Week 4 continues!
+
+## Exercise 79 NumberStatistics
+
+This exercise teaches that we could call methods within an object. Objects can call their own methods. In this exercise, we will have two objects `amountOfNumbers` and `sum`. We get to see `sum()` being called from the `average` method.  This exercise wants:
+
+- `addNumber` adds a new number to the statistics
+- `amountOfNumbers` tells us how many numbers have been added to the statistics
+- `sum` returns the sum of the added numbers (if no numbers added, the sum is 0)
+- `average` returns the average of the added numbers (if no numbers added, the average is 0)
+- create a program that asks the user to input numbers of type integer
+- when gives -1, the program stops and prints the sum of the given numbers (excluding the -1)
+- Change it to also calculates the sum of even and odd numbers in the user input (again -1 excluded)
+
+Okay, we will start with non-main class, or <strong>NumberStatistics</strong> class. I will comment everything in the code block.
+
+```java
+public class NumberStatistics {                           
+    private int amountOfNumber;                     //create object  
+    private int sum;                                //create object
+
+    public NumberStatistics() {                 //constructor
+        this.amountOfNumber = amountOfNumber;   //initialize object
+        this.sum = sum;                         //initialize object
+    }
+
+    public void addNumber(int number){          //parameters number given by user
+        amountOfNumber++;                       //counts the numbers given by user
+        sum += number;                          //sum adds all numbers given by user
+    }
+
+    public int amountOfNumbers(){               //returns result of amountOfNumbers++
+        return amountOfNumber;
+    }
+
+    public int sum(){                           //returns result of sum +=number                 
+        return sum;
+    }
+
+    public double average(){                    //calculates average
+        if (amountOfNumber != 0) {              //if amountOfNumber is not 0
+            double average = (1.0 * sum())/amountOfNumber;
+            return average;
+        } return 0;
+    }
+}
+```
+
+What we have done so far:
+
+- ~~`addNumber` adds a new number to the statistics~~
+- ~~`amountOfNumbers` tells us how many numbers have been added to the statistics~~
+- ~~`sum` returns the sum of the added numbers (if no numbers added, the sum is 0)~~
+- ~~`average` returns the average of the added numbers (if no numbers added, the average is 0)~~
+
+Three remaining tasks require executing, so better to do that in main class.
+
+- create a program that asks the user to input numbers of type integer
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+
+        NumberStatistics stats = new NumberStatistics();
+        NumberStatistics even = new NumberStatistics();
+        NumberStatistics odd = new NumberStatistics();
+
+        int num = 0;
+        System.out.println("Type numbers: ");
+```
+
+- when gives -1, the program stops and prints the sum of the given numbers (excluding the -1)
+
+```java
+
+        while (num >= 0){
+            num = Integer.parseInt(reader.nextLine());
+        }
+
+        System.out.println("sum: " + stats.sum());
+```
+
+- change it to also calculates the sum of even and odd numbers in the user input (again -1 excluded)
+
+```java
+        while (num >= 0){
+            num = Integer.parseInt(reader.nextLine());
+            if (num % 2 == 0 && num >= 0) {
+                stats.addNumber(num);
+                even.addNumber(num);
+            } else if (num % 2 != 0 && num >= 0){
+                stats.addNumber(num);
+                odd.addNumber(num);
+            }
+        }
+
+        System.out.println("sum: " + stats.sum());
+        System.out.println("sum of even: " + even.sum());
+        System.out.println("sum of odd: " + odd.sum());
+    }
+}
+```
+
+This exercise is good practice with having two different class files. Main or executing class file, and non-main class creating objects and methods. I think I am getting there!
+
+# Randomness using Random()
+
+<strong>Exercise 80</strong> to <strong>Exercise 82</strong> teaches on how to use a method `Random()`. It can be little hard to grasp at first. I get confused sometime in the few next exercises.
+
+## Dice
+
+We will start with <strong>Exercise 80</strong>. It is the easiest for us beginners to understand how it works. There are main and non-main classes below. They have skeletons given, and non-main class is incomplete. Only one more line of coding in non-main class needed to complete it:
+
+<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2; width: 750px; height: 400; margin: auto">
+  <div style="float: left; width: 372px; height: auto">
+      <h2>Main Class</h2>
+      <pre style="width: 370px; height: 270px; font-size: 50%">
+        <code class="language-java">
+public class Main {
+    public static void main(String[] args) {
+        Dice dice = new Dice(6);
+
+        int i = 0;
+        while ( i < 10 ) {
+            System.out.println( dice.roll() );
+            i++;
+        }
+    }
+}
+        </code>
+      </pre>
+  </div>
+  <div style="float: right; width: 372px; height: auto; margin-top: .5px">
+      <h2>Dice Class</h2>
+      <pre style="width: 370px; height: 270px; font-size: 50%">
+        <code class="language-java">
+import java.util.Random;
+
+public class Dice {
+    private Random random;
+    private int numberOfSides;
+
+    public Dice(int numberOfSides){
+        this.numberOfSides = numberofSides;
+        random = new Random();
+
+    }
+
+    public int roll() {
+          // we'll get a random number in the range 1-numberOfSides<
+    }
+}
+        </code>
+      </pre>
+  </div>
+</div>
+
+<strong>Main Class</strong> is the executing class, and what's going on in there is a constructor `Dice` creates a object named `dice`. Its parameter is `6` or `Dice(6)`.  `i` is a counter variable and initialized with a `0`. It increments up to 9, or actually 10 times since it starts with 0. Prints what `dice.roll()` produced until `i` reaches to 10 times. Nothing is needed to be added in this Main class.
+
+One line of coding is needed to add to this <strong>Dice Class</strong>. We have an encapsulation of two different private variables `random` and `numberOfSides`. The type of `random` is `Random` which is new to me. The constructor `Dice()`, with `int numberOfSides` as its parameter, initialized both private variables. `random` is assigned as a `Random()`, but what happens is that constructor or object to be made, `Dice()` is now acting as a `Random()`. I assume `numberOfSides` as a parameter is to be the maximum or the highest number possible to be randomized.
+
+`public int roll()` is a method created to randomize a number when being executed. Now this I have a hard time with. Truthfully, I would have never solved it had I not googled up for a solution. There is a new method in Scanner that I have yet to learn and it is `.nextInt()`. I have always been using `.nextLine()` or `Integer.parseInt(reader.nextLine)`. So this `.nextInt()` is new to me. Let's see the solution.
+
+```java
+public int roll() {
+    // create here a random number belongig to range 1-numberOfSided
+    return random.nextInt(numberOfSides) + 1;
+}
+```
+
+So the method `.roll()` is created, and its function is to `return` the number that `random.nextInt(numberOfSides) + 1;` has randomized. Notice how there is a `+ 1`, if I did not include that, then `0` will occur. I don't want a `0`. I try to understand more about `Random()` and [Oracle][Oracle] website will give a documentation to just about every method out there for Java, but it doesn't a great job explaining in laymen term. I think [stackoverflow][stackoverflow] is better and easier to understand. I added `+ 1` as a minimum number. 
+
+
+[Oracle]: https://docs.oracle.com/javase/7/docs/api/java/util/Random.html
+[stackoverflow]: https://stackoverflow.com/questions/20389890/generating-a-random-number-between-1-and-10-java
