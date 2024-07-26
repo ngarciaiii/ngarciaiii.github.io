@@ -2,8 +2,8 @@
 layout: post
 title: "Black Belt Text-Fu"
 date: 2022-05-19 00:00:00 -0400
-categories: PWK
-tags: [OSCP]
+categories: Linux
+tags: [Basics]
 years: ['2022']
 comments: true
 ---
@@ -11,13 +11,9 @@ comments: true
 ## This is the Advanced Text-Fu section from [Linux Journey][Linux Journey]
 
 ## Regex (Regular expression)
-Regular expression is a tool that uses special notations as an universal language with almost any programming language. I would guess that it is a stone age retrocomputer's early language. Ok this part wants to create a file with a string.
+Regular expression is a tool that uses special notations as an universal language with almost any programming language. 
 
 ```bash
-# remove sample.txt if you already have it
-# actually don't need to, '>' will overwrite, I am just paranoid
-$ rm sample.txt
-
 # create a file with two lines string like this
 $ echo "sally sells shells\nby the seashore" > sample.txt
 $ cat sample.txt
@@ -57,11 +53,11 @@ $grep d[a-c]g sample.txt
 
 ## Text Editors
 
-I am still sort of new with linux to be honest. I am unfamilar with ***Vim*** and ***Emacs***, however these two are recommended by [Linux Journey][Linux Journey]. I have seen professional programmers/hackers in youtube using either vim or emacs or nano. Some like to use GUI text editors like Sublime Text, or Geany. Okay emacs looks like a GUI!
+***Vim*** and ***Emacs*** are recommended by [Linux Journey][Linux Journey]. I like to use nano. It would be useful to know *VIM* because it is sometimes default in some programs and applications like `.git`.
 
 vim  | emacs
 :-------------------------:|:-------------------------:
-![vim](/public/img/vim.png){:height="270px" width="auto"} |  ![emacs](/public/img/emacs.png){:height="270px" width="auto"}
+![vim](/assets/img/blog/vim.png){:height="270px" width="auto"} |  ![emacs](/assets/img/blog//emacs.png){:height="270px" width="auto"}
 
 ## Vim, short for vi + IMproved
 
@@ -90,10 +86,9 @@ by the seashore
 :qa!
 ```
 
+Often will need to use `:wq`, which is short for "write"/(save) and "quit".
+
 After looking into help, I realize vim has its own tutorial. I think I am going to do a post on vim alone and same with emacs. It is too much to cover in this post. [Linux Journey][Linux Journey] did great by recommending these text editors and highlights.
-
-
-
 
 
 
