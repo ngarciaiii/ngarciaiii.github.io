@@ -1,8 +1,4 @@
 <!-- JS selector for site. -->
-
-<!--- Font Awesome Kit Scripts -->
-<!-- <script src="https://kit.fontawesome.com/f5b2717285.js" crossorigin="anonymous"></script> -->
-
 <!-- commons -->
 
 {% assign urls = site.data.origin[type].search.js %}
@@ -100,11 +96,11 @@
   {% endif %}
 
   <!-- Web Analytics -->
-  {% for analytics in site.analytics %}
+  <!-- {% for analytics in site.analytics %}
     {% capture str %}{{ analytics }}{% endcapture %}
-    {% assign type = str | split: '{' | first %}
+      {% assign type = str | split: '{' | first %}
     {% if site.analytics[type].id and site.analytics[type].id != empty %}
       {% include analytics/{{ type }}.html %}
     {% endif %}
-  {% endfor %}
+  {% endfor %} -->
 {% endif %}
