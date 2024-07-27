@@ -96,11 +96,11 @@
   {% endif %}
 
   <!-- Web Analytics -->
-  <!-- {% for analytics in site.analytics %}
+  {% for analytics in site.analytics %}
     {% capture str %}{{ analytics }}{% endcapture %}
       {% assign type = str | split: '{' | first %}
     {% if site.analytics[type].id and site.analytics[type].id != empty %}
       {% include analytics/{{ type }}.html %}
     {% endif %}
-  {% endfor %} -->
+  {% endfor %}
 {% endif %}
