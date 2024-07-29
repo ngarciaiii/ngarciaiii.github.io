@@ -63,6 +63,3 @@ triggering Github deplyoment
 wake up ghpage deployment
 how manytimes gotta I trigger deployment
 deployment triggerer
-triggering deployment
-t-d again
-t-d
