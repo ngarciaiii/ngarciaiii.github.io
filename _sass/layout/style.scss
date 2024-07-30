@@ -4,7 +4,7 @@ custom styles overhauls
 
 
 // sidebar - leftside, aside - rightside
-#sidebar, aside {
+#sidebar {
     background-image: url('/assets/img/miscs/grasshoppers.jpeg');
     background-repeat: repeat; /* Repeat the image */
     background-size: auto; /* Adjust as needed */
@@ -28,6 +28,15 @@ aside {
     }
 }
 
+#panel-wrapper {
+    background-image: url('/assets/img/miscs/grasshoppers.jpeg');
+    background-repeat: repeat; /* Repeat the image */
+    background-size: auto; /* Adjust as needed */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height */ 
+}
+
 #sidebar {
      h1.site-title {
         color:#1e1e1e !important;
@@ -48,5 +57,4 @@ aside {
     h2 a {
         color: #d2603a;
     }
-
 }
