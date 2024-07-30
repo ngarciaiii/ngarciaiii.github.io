@@ -78,7 +78,7 @@ Database systems have a number of tuning parameters associated. Can make a signi
 - Each <strong>tuple</strong> or <strong>row</strong> has a value for each attribute
 
 Let's take a look at the relation <strong>Student</strong> below:
-![student relation](/public/img/databases/Slide1.png){: .center-image }
+![student relation](/assets/img/blog/databases/Slide1.png){: .center-image }
 
 Each attribute has a <strong>type</strong> like int, or float, and or jpeg file. Type is sometime referred as a <strong>domain</strong>.
 
@@ -87,7 +87,7 @@ We can see <strong>schema</strong> in relation <strong>Student</strong>, mostly 
 Schema decide to have data of ID, Name, GPA, and Photo. These are instances help identifying a "student" in table <strong>Student</strong>. Attributes is encouraged to be a detectable unique character or <strong>key</strong>. Key is attribute whose value is unique in each tuple.
 
 Look at different relation <strong>College</strong>:
-![college relation](/public/img/databases/Slide2.png){: .center-image height="300px" width="375px"}
+![college relation](/assets/img/blog/databases/Slide2.png){: .center-image height="300px" width="375px"}
 
 There are probably <strong>SEVERAL colleges with SAME NAME "Washington"</strong>, so it <strong>CAN'T</strong> be really a <strong>key</strong> BUT if state is added next to it. <strong>Two combined values of attributes together CAN</strong>  become a <strong>key</strong>. Key is effective when used as a target for query.
 
@@ -115,7 +115,7 @@ The basic steps in creating and using relational database goes:
 People have tendency of drawing database as a barrel or a massive disk.
 <br>
 
-![database](/public/img/databases/Slide3.png){: .center-image height="370px" width="auto"}
+![database](/assets/img/blog/databases/Slide3.png){: .center-image height="370px" width="auto"}
 
 After that, the next step would be:
 
@@ -132,7 +132,7 @@ Queries would be such:
 
 When a query 1 would goes over the relations and "create a new relation", it is called <strong>closed</strong>. If there's a query 2 coming up and covers the "new relation", and existing relations then it is <strong>compositionality</strong>.
 
-![closed, compositional](/public/img/databases/Slide4.png)
+![closed, compositional](/assets/img//blog/databases/Slide4.png)
 
 ## Query languages
 

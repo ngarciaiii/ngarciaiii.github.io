@@ -8,7 +8,7 @@ years: ['2017']
 comments: true
 ---
 
-Starting the <strong>week 4</strong> of [MOOC.fi][MOOC.fi] OOP and it will cover mainly the <strong>basics of objects</strong>. Consists of <strong>Exercise #70 to Exercise #83</strong>. I had had a hard time to grasp the concept of Java's <strong>Object-oriented programming</strong>. I struggled mostly because of rigorous TMC wanting me to program in their ways. The summary of this <strong>week 4</strong> is:
+Starting the <strong>week 4</strong> of [MOOC.fi][MOOC.fi] OOP and it will cover mainly the <strong>basics of objects</strong>. Consists of <strong>Exercise #70 to Exercise #83</strong>. I had a hard time to grasp the concept of Java's <strong>Object-oriented programming</strong>. I struggled mostly because of rigorous TMC wanting me to program in their way specifically. The summary of this <strong>week 4</strong> is:
 
 # "Oh man, week 4 is tough."
 {: .h1 align="center"}
@@ -91,7 +91,7 @@ Now putting these in cascading order:
 
 Examples and in same order as above:
 
-![class, object, method outline](/public/img/java/outline.png)
+![class, object, method outline](/assets/img/blog/java/outline.png)
 
 Objects have their own methods, and information contained inside object is called <strong> state of the object</strong>. State of the object holds <strong>attributes</strong>
 
