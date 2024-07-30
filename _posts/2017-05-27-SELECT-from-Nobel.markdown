@@ -2,8 +2,8 @@
 layout: post
 title:  "SELECT from Nobel"
 date:   2017-05-27 10:29:30
-categories: SQL
-tags: [SQLzoo]
+categories: Programming
+tags: [SQL]
 years: ['2017']
 comments: true
 ---

@@ -2,15 +2,15 @@
 layout: post
 title: "Still a Grasshopper"
 date: 2022-05-17 09:00:00 -0400
-categories: PWK
-tags: [OSCP]
+categories: Linux
+tags: [Basics]
 years: ['2022']
 comments: true
 ---
 
 ## More of Linux basics
 
-Resuming on [Linux Journey][Linux Journey] and hope to finish rest of Grasshopper section today! I learned linux commands. Right now, I am in Text-Fu section. It teaches input/output streams. 
+Resuming on [Linux Journey][Linux Journey], and I am in Text-Fu section. It teaches input/output streams. 
 
 ```bash
 # Standard Out (stdout)
@@ -29,7 +29,7 @@ $ cat < peanuts.txt > banana.txt
 
 ## stdin, stdout, and stderr
 
-When following thru Text-Fu, I had few questions like why these are called `stdin`, `stdout`, and `stderr` instead of fully spelled out. I couldn't really find the answer now. Someday I might come back once I find out.  
+When following thru Text-Fu, I had few questions like why these are called `stdin`, `stdout`, and `stderr`. I assume it is short for "standard input", "standard output", and "error".
 
 ```bash
 # this outputs a file to a directory, but in this case, a directory that doesn't exist
@@ -57,7 +57,7 @@ $ ls /fake/directory &> peanuts.txt
 $ ls /fake/directory 2> /dev/null
 ```
 
-I can see myself using `2> /dev/null` one day if error message is getting annoying. In the next subsection, **pipe and tee**,  I have seen and used `|` before many times in the terminal. It's called pipe, looks just like a straight vertical pipeline. Basically piping information into something like `less`. This author said `less` is extremely useful and a must in all eternity. I will have to get familiar with `less` eventually. A `tee` is a three ways pipe looking like 'T'. It can write output to two different streams.
+In the next subsection, **pipe and tee**,  I have seen and used `|` before many times in the terminal. It's called pipe, looks just like a straight vertical pipeline. Basically piping information into something like `less`. A `tee` is a three ways pipe looking like 'T'. It can write output to two different streams.
 
 ```bash
 # without pipe and or tee, might be hard to navigate quickly if loooooong list

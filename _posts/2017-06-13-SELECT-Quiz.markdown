@@ -2,8 +2,8 @@
 layout: post
 title:  "SELECT Quiz"
 date:   2017-06-13 11:48:30
-categories: SQL
-tags: [SQLzoo]
+categories: Programming
+tags: [SQL]
 years: ['2017']
 comments: true
 ---

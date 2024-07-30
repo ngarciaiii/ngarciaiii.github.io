@@ -2,8 +2,8 @@
 layout: post
 title:  "SELECT within SELECT"
 date:   2017-06-13 01:29:30
-categories: SQL
-tags: [SQLzoo]
+categories: Programming
+tags: [SQL]
 years: ['2017']
 comments: true
 ---

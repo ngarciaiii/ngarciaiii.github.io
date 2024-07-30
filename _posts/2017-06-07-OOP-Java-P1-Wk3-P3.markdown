@@ -2,8 +2,8 @@
 layout: post
 title:  "OOP Java P1 Wk3 P3"
 date:   2017-06-07 9:05:30
-categories: java
-tags: [MOOC]
+categories: Programming
+tags: [java]
 years: ['2017']
 comments: true
 ---

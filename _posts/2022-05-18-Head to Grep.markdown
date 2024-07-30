@@ -2,8 +2,8 @@
 layout: post
 title: "Head to Grep"
 date: 2022-05-18 09:00:00 -0400
-categories: PWK
-tags: [OSCP]
+categories: Linux
+tags: [Basics]
 years: ['2022']
 comments: true
 ---
@@ -70,7 +70,7 @@ file2.txt
 2 doe
 3 sue
 
-$join file1.txt file2.txt
+$ join file1.txt file2.txt
 # result:
 1 john doe
 2 jane doe
@@ -111,7 +111,7 @@ $ sort -n file1.txt
 
 ```
 
-All commands in codeblocks are barely scratched the surface. Check by adding `--help` next to each command and see how complicated all these could get!
+Add `--help` next to each command for more information
 
 <iframe src="https://giphy.com/embed/QxZ0nbcVgMlPlnfZos" width="320" height="320" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dreamworks-lets-do-this-kung-fu-panda-master-shifu-QxZ0nbcVgMlPlnfZos"></a></p>
 

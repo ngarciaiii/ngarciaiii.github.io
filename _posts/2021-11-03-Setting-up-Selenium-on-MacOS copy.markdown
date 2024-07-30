@@ -2,8 +2,8 @@
 layout: post
 title: "Setting up Selenium in Visual Studio Code on MacOs with Apple Chip M1"
 date: 2021-11-03 19:08:30 -0400
-categories: QA
-tags: [Selenium]
+categories: Programming
+tags: [QA]
 years: ['2021']
 comments: true
 ---
@@ -28,7 +28,7 @@ I installed [Visual Studio Code][Visual Studio Code] when I first got this lapto
 
 I don't remember exactly the steps of installing Visual Studio Code, but I think it should be simple. Click on this [Visual Studio Code][Visual Studio Code] and scroll all way down to the bottom until you see this image:
 
-![VS-ARM](/public/img/VS-ARM.png)
+![VS-ARM](/assets/img/blog/VS-ARM.png)
 
 Click on `Apple Silicon` to install the VS Code, <strong>again this is for MacBook Pro with chip `Apple M1` </strong> or what I usually see `ARM 64` for different downloads.
 
@@ -42,7 +42,7 @@ After installing Java SDK, open up terminal and then type either `java -version`
 
 ## 3) Add Java Extension Pack in VS Code
 
-![JEPVS](/public/img/JEPVS.jpg)
+![JEPVS](/assets/img/blog/JEPVS.jpg)
 
 I find it easier to add the package from in VS Code application. Please check the video below on how to add an extension in Visual Studio Code application. 
 
@@ -52,21 +52,21 @@ I am basically repeating what https://funnelgarden.com/setup-selenium-with-java-
 
 Open up Visual Studio Code, click on explorer which has a icon of two files on upper left corner, and then click "Create Java Project" button on the bottom. 
 
-![java_project](/public/img/java_project.png){:height="500px" width="auto"}
+![java_project](/assets/img/blog/java_project.png){:height="500px" width="auto"}
 
 Dropdown box will ask for which project type. Pick "No build tools". After that, it will pop up Mac's Finder application asking where you want to place your project in. I created a subfolder "firstTest" in "Selenium" folder.
 
-![no_build_tools](/public/img/no_build_tools.png)
+![no_build_tools](/assets/img/blog/no_build_tools.png)
 
 VS Code should create a new project with src folder with "Hello, World!" file and a Readme.
 
-![example](/public/img/example.png)
+![example](/assets/img/blog/example.png)
 
 ## 4) Installing Selenium WebDriver
 
 What is [Selenium][Selenium]? It is a QA automation tool used to test browsers and web application. Currently there's a great demand for it. Click on this link [Selenium][Selenium] and click on `Downloads` in the menu bar on the top. Scroll down to the java links and pick the stable one.
 
-![selenjava](/public/img/selenjava.png){:height="auto" width="50%"}
+![selenjava](/assets/img/blog/selenjava.png){:height="auto" width="50%"}
 
 After downloading the stable zip file, open two finders. One in Downlaods folder and another where the project folder might be at. Create another folder "jars and drivers" in the project folder for. Open the zip and extract all `.jars` files and move over to project folder in Selenium folder. 
 

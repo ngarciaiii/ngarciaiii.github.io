@@ -17,17 +17,17 @@ I was software QA tester for 4 years, I enjoyed working with my co workers and m
 
 A guy who is currently my mentor encouraged to try pen testing and I like it so far! Learning to do some "black hat" hacking on [HackTheBox][HackTheBox] and using brute-forcing was exciting, but mentor said to hold the horse!
 
->  you can't do brute force anywhere in the world professionally so don't spend too much time on it. Criminal hackers <br>can brute force, but for work or bug bounties <br>brute force is not allowed.
+> you can't do brute force anywhere in the world professionally so don't spend too much time on it. Criminal hackers can brute force, but for work or bug bounties, brute force is not allowed.
 
-Quote unquote, and he then said **"OSCP is the gold standard"**. Also that I'll have to take PEN 200 course to pass the exam. He suggested on taking PEN 100 course first. Well grab something to brace on and take a look below.
+Quote unquote, he then said **"OSCP is the gold standard"**. Also that I'll have to take PEN 200 course to pass the exam. He suggested on taking PEN 100 course first. Well grab popcorns on and take a look below.
 
-![PENCO](/public/img/PEN_Courses.png){:height="310px" width="auto"}
+![PENCO](/assets/img/blog/PEN_Courses.png){:height="310px" width="auto"}
 
-**Did you see that?! 699 + 1499 = $2,198** I am pretty sure I could do without PEN 100 and found this gem [abatchy.com][abatchy.com]. It got a cute avatar showing llamma or alpaca, probably the latter. Meanwhile following abatchy's guide, I have been researching on successful pen testers/hackers in the world. Most of them are proficient in Python. I programmed in python over 10 years ago and it was for a year long before dived into JavaScript and Java. I need to pick up and restore my old forgotten skills. [Automate The Boring Stuff][Automate] seems like a great free way to relearn Python. 
+**Did you see that?! 699 + 1499 = $2,198** I am pretty sure I could do without PEN 100 and found this gem [abatchy.com][abatchy.com]. It got a cute avatar showing llamma or alpaca, probably the latter. Meanwhile following abatchy's guide, I have been researching on successful pen testers/hackers in the world. Most of them are proficient in Python. I programmed in python 10 years ago and it was for a year long before dived into JavaScript and Java. I need to pick up and restore my old forgotten skills. [Automate The Boring Stuff][Automate] seems like a great free way to relearn Python. 
 
 [abatchy][abatchy.com]  | [Automate][Automate]
 :-------------------------:|:-------------------------:
-![abatchy](/public/img/abatchy.png){:height="270px" width="auto"} |  ![automate](/public/img/automate.png){:height="270px" width="auto"}
+![abatchy](/assets/img/blog/abatchy.png){:height="270px" width="auto"} |  ![automate](/assets/img//automate.png){:height="270px" width="auto"}
 
 
 # Now what?

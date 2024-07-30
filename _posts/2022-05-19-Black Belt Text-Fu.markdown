@@ -81,6 +81,10 @@ by the seashore
 # it calls vim's very own "help.txt", and navigate with h, j, k ,l. 
 :h
 
+# i find myself using this often
+# short for "write"/(save) and "quit"
+:wq
+
 # too much, and it has its own tutorial for beginner, I will do that!
 # let's exit by doing this
 :qa!

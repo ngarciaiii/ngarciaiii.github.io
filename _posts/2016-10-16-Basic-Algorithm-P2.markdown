@@ -2,8 +2,8 @@
 layout: post
 title:  "Basic Algorithm P2"
 date:   2016-10-16 8:05:30 -0400
-categories: javascript
-tags: [FreeCodeCamp]
+categories: Programming
+tags: [javascript]
 years: ['2016']
 comments: true 
 ---

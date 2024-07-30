@@ -398,9 +398,11 @@ main {
   @extend %text-sm;
 
   a {
-    &:not([class]):hover {
-      @extend %link-hover;
-    }
+
+    color: #d2603a;
+    // &:not([class]):hover {
+    //   @extend %link-hover;
+    // }
   }
 
   em {

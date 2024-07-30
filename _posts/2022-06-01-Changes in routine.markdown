@@ -13,7 +13,7 @@ years: ['2022']
 
 I just started taking [Offensive Security Certified Professional][OSCP] course and it's super strict. I cannot blog on most of contents, questions, and answers from OSCP course. ***I don't plan to***. [OSCP][OSCP] Course is fun and can be little challenging. I think OSCP is the fastest way to learn, I might be wrong. It teaches strategically. 
 
-I would like to continue with [abatchy.com][abatchy.com]'s noob guide, however I need to improve my time management. I just want to speed up and go full force on OSCP course. I do feel I need to review [Automate The Boring Stuff][Automate] meanwhile. 
+I would like to continue with [abatchy.com][abatchy.com]'s noob guide, however I need to improve my time management. I just want to speed up and go full force on OSCP course.
 
 
 

@@ -2,15 +2,15 @@
 layout: post
 title: "Linux Syntax"
 date: 2022-05-12 10:34:00 -0400
-categories: PWK
-tags: [OSCP]
+categories: Linux
+tags: [Basics]
 years: ['2022']
 comments: true
 ---
 
 # Starting with Linux
 
-Following [abatchy.com][abatchy.com]'s "How to prepare for PWK/OSCP, a noob-friendly guide", on the top of a long list is [Linux Journey][Linux Journey]. I am going to read thru the whole thing quickly as I can.
+Following [abatchy.com][abatchy.com]'s "How to prepare for PWK/OSCP, a noob-friendly guide", and on the top of a long list is [Linux Journey][Linux Journey].
 
 ## Learned more about distros
 
@@ -27,20 +27,20 @@ There are several Linux distributions or people call them ***distros***. The mos
 
 There are much more Linux distros!
 
-![LinuxDistros](/public/img/linux_distros.webp)
+![LinuxDistros](/assets/img/blog/linux_distros.webp)
 
 
-I recommend to use virtual machine, ***VM***, to install Linux distro. Look up youtube on how to install VM and take a pick. Ubuntu is the easiest to start with. I think most of distros are. I haven't tried Arch btw!
+Use virtual machine, ***VM***, to install Linux distro. Look up youtube on how to install VM and take a pick. Ubuntu is the easiest to start with. I notice Kali distro is not on the list, but it is relatively easy to install and to use.
 
 ## Command Line
 
-Shell is a program that takes commands and sends to OS to perform. "Terminal" and "Console" both are sort of GUI for shell. Linux uses bash (Bourne Again shell). Oh my! Is that why black op elite assassin is given an alisas "Jason Bourne", because he has the ability to execute independently and directly? 
+Shell is a program that takes commands and sends to OS to perform. "Terminal" and "Console" both are sort of GUI for shell. Linux uses bash (Bourne Again shell), so effective and directly like Jason Bourne.
 
 <iframe src="https://giphy.com/embed/orUDTj9Q5TMzTdB892" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 
 <br>
 
-All in seriousness, it is just author of shell named Stephen Bourne, and bash is superset of earlier shell Bourne. Maybe a Christian pun, "born again"? Anyway there are other type of shells: ksh, zsh, and tsch. Bash seems to be recommended. In prompt, will see either `$` or `#`. `$` is normal user and `#` is superuser or authorized user. Let's list out all commands below! 
+All in seriousness, it is just author of shell named Stephen Bourne, and bash is superset of earlier shell Bourne. Maybe a Christian pun, "born again"? Anyway there are other type of shells: ksh, zsh, and tsch. Bash seems to be recommended. Apple's MacBook Pro uses zsh. In prompt, will see either `$` or `#`. `$` is normal user and `#` is superuser or authorized user. Let's list out all commands below! 
 
 ```bash
 # outputs the current date in day month hour:minute:second AM/PM timezone year format
