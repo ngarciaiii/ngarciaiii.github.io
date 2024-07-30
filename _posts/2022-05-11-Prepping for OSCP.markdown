@@ -27,7 +27,7 @@ Quote unquote, he then said **"OSCP is the gold standard"**. Also that I'll have
 
 [abatchy][abatchy.com]  | [Automate][Automate]
 :-------------------------:|:-------------------------:
-![abatchy](/assets/img/blog/abatchy.png){:height="270px" width="auto"} |  ![automate](/assets/img//automate.png){:height="270px" width="auto"}
+![abatchy](/assets/img/blog/abatchy.png){:height="270px" width="auto"} |  ![automate](/assets/img/blog/automate.png){:height="270px" width="auto"}
 
 
 # Now what?
