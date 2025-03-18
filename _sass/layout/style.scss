@@ -5,9 +5,10 @@ custom styles overhauls
 
 // sidebar - leftside, aside - rightside
 #sidebar {
-    background-image: url('/assets/img/miscs/grasshoppers.jpeg');
-    background-repeat: repeat; /* Repeat the image */
-    background-size: auto; /* Adjust as needed */
+    /*background-image: url('/assets/img/miscs/grasshoppers.jpeg');*/
+    background-image: url('/assets/img/miscs/tools6.png');
+    background-repeat: repeat-y; /* Repeat the image */
+    background-size: contain; /* Adjust as needed */
     margin: 0;
     padding: 0;
     height: 100vh; /* Full height */
@@ -29,9 +30,11 @@ aside {
 }
 
 #panel-wrapper {
-    background-image: url('/assets/img/miscs/grasshoppers.jpeg');
-    background-repeat: repeat; /* Repeat the image */
-    background-size: auto; /* Adjust as needed */
+    /*background-image: url('/assets/img/miscs/grasshoppers.jpeg');*/
+    background-image: url('/assets/img/miscs/tools7.png');
+    background-repeat: repeat-y; /* Repeat the image */
+    background-position: center top;
+    background-size: contain; /* Adjust as needed */
     margin: 0;
     padding: 0;
     height: 100vh; /* Full height */ 
