@@ -71,3 +71,4 @@ ghpg trigger
 deploybundle lock --add-platform x86_64-linux
 
 ruby 3.1.4
+ubuntu-22.04
