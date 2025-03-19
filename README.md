@@ -74,3 +74,4 @@ ruby 3.1.4
 ubuntu-22.04
 self-hosted
 ubu2204
+ubu2204
