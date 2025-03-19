@@ -68,3 +68,5 @@ td again
 trigger deploy
 trigger
 ghpg trigger
+deploybundle lock --add-platform x86_64-linux
+
