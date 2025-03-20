@@ -85,3 +85,4 @@ switched yml-disabled
 3.1.4 in right yml
 ruby 3.1.4 local
 bundle install after 3.1.4
+added rw in github deploy page
