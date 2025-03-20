@@ -78,3 +78,4 @@ ubu2204
 test trigger
 22.04
 3.1.4 ruby
+trigger deploy
