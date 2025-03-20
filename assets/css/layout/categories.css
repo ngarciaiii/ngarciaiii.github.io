@@ -1,0 +1,17 @@
+/* Error: Undefined variable.
+ *    ,
+ * 19 |     $radius: calc($base-radius - 1px);
+ *    |                   ^^^^^^^^^^^^
+ *    '
+ *   _sass/layout/categories.scss 19:19  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 19 \2502      $radius: calc($base-radius - 1px);\a    \2502                    ^^^^^^^^^^^^\a    \2575 \a   _sass/layout/categories.scss 19:19  root stylesheet";
+}

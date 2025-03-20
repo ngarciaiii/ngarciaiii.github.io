@@ -1,0 +1,50 @@
+/*
+custom styles overhauls
+*/
+#sidebar {
+  /*background-image: url('/assets/img/miscs/grasshoppers.jpeg');*/
+  background-image: url("/assets/img/miscs/tools6.png");
+  background-repeat: repeat-y; /* Repeat the image */
+  background-size: contain; /* Adjust as needed */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height */
+}
+
+aside .btn:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+aside #panel-wrapper .post-tag:hover {
+  color: rgba(255, 255, 255, 0.95);
+}
+aside h2.panel-heading {
+  color: #1e1e1e !important;
+}
+
+#panel-wrapper {
+  /*background-image: url('/assets/img/miscs/grasshoppers.jpeg');*/
+  background-image: url("/assets/img/miscs/tools7.png");
+  background-repeat: repeat-y; /* Repeat the image */
+  background-position: center top;
+  background-size: contain; /* Adjust as needed */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full height */
+}
+
+#sidebar h1.site-title {
+  color: #1e1e1e !important;
+}
+
+#topbar a {
+  color: var(--text-muted-color);
+}
+
+.content a {
+  color: #d2603a;
+}
+.content h2 a {
+  color: #d2603a;
+}
+
+/*# sourceMappingURL=style.css.map */
