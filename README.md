@@ -76,3 +76,4 @@ self-hosted
 ubu2204
 ubu2204
 test trigger
+22.04
