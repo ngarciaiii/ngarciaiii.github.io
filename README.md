@@ -81,3 +81,4 @@ test trigger
 trigger deploy
 extra yml-disabled
 switched yml-disabled
+22.04 in right yml
