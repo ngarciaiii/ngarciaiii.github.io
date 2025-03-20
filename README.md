@@ -75,3 +75,4 @@ ubuntu-22.04
 self-hosted
 ubu2204
 ubu2204
+test trigger
